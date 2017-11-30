@@ -1,4 +1,4 @@
-class FirebaseAuth {
+export class FirebaseAuth {
     private error : boolean = false;
     private errorMessage : string|undefined;
 
@@ -12,4 +12,3 @@ class FirebaseAuth {
 
     private sendUserVerification(email) : void  {}
 }
-export default FirebaseAuth;

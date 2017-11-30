@@ -1,4 +1,4 @@
-class FirebaseDatabase {
+export class FirebaseDatabase {
     
     writeDatabase(ref : string, data) : void {}
     readDatabase(ref : string) {}
@@ -7,5 +7,3 @@ class FirebaseDatabase {
     deleteDatabase(ref : string) {}
     eventListener(refObject, listenOn, func) {} 
 }
-
-export default FirebaseDatabase;
