@@ -1,3 +1,24 @@
-<nb-auth-block>
-    <h2 class="title">Sign Up</h2>
-</nb-auth-block>
+<nb-card>
+    <nb-card-body>
+        <div class="col-sm-12 text-center">
+            <h2 class="title">Sign Up</h2>
+            <div class="col-4 col-centered">
+                <form [formGroup]="registerForm" class="">
+                    <div class="form-group">
+                        <label for="input-name" class="sr-only">Nickname</label>
+                        <input name="nickname" class="form-control" placeholder="Nickname" formControlName="nickname" id="input-name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="input-email" class="sr-only">Email</label>
+                        <input name="email" class="form-control" placeholder="Email" formControlName="email" id="input-email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="input-pw" class="sr-only">Password</label>
+                        <input name="password" class="form-control" placeholder="Password" formControlName="password" id="input-pw"  type="password" required />
+                    </div>
+                    <button [disabled]="submitted || !registerForm.valid" class="btn btn-block btn-hero-success" [class.btn-pulse]="submitted" (click)="onSubmit()">Register</button>
+                </form>
+            </div>
+        </div>
+    </nb-card-body>
+</nb-card>
