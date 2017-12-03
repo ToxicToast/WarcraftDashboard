@@ -1,7 +1,28 @@
 <nb-card>
     <nb-card-body>
-        <div class="col-xl-4 col-lg-6 col-md-8 col-sm-12">
-            <h2 class="title">test</h2>
+        <div class="col-sm-12 text-center">
+            <h2 class="title">Sign In</h2>
+            <div class="col-4 col-centered">
+                <form [formGroup]="loginForm" class="">
+                    <div class="form-group">
+                        <label for="input-email" class="sr-only">Email</label>
+                        <input name="email" class="form-control" placeholder="Email" formControlName="email" id="input-email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="input-pw" class="sr-only">Password</label>
+                        <input name="password" class="form-control" placeholder="Password" formControlName="password" id="input-pw" type="password" required />
+                    </div>
+                    <button [disabled]="submitted || !loginForm.valid" class="btn btn-block btn-hero-success" [class.btn-pulse]="submitted" (click)="onSubmit()">Login</button>
+                </form>
+                <div class="links">
+                    <small class="form-text">
+                        Don't have an account?
+                        <a [routerLink]="['/pages/auth/register']">
+                            <strong>Sign Up</strong>
+                        </a>
+                    </small>
+                </div>
+            </div>
         </div>
     </nb-card-body>
 </nb-card>

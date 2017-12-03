@@ -9,8 +9,16 @@ export class AuthService {
     private fbAuth : FirebaseAuth
   ) { }
 
-  registerUser(email : string, password : string) {
-    this.fbAuth.createUser(email, password);
+  registerUser(email : string, password : string, nickname : string) {
+    return this.fbAuth.createUser(email, password, nickname);
+  }
+
+  loginUser(email : string, password : string) {
+    return this.fbAuth.signInUser(email, password);
+  }
+
+  currentUser() {
+    return this.fbAuth.currentUser();
   }
 
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { AuthService } from '../../../core/services/auth.service';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-register',
@@ -13,6 +14,7 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private fb : FormBuilder,
+    private router: Router,
     private _authService : AuthService
   ) { }
 
@@ -23,7 +25,9 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     const { nickname, email, password } = this.registerForm.value;
-    this._authService.registerUser(email, password);
+    const status = this._authService.registerUser(email, password, nickname);
+    this.submitted = false;
+    this.router.navigate(['/']);
   }
 
   private createForm() {

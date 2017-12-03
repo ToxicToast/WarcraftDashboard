@@ -11,12 +11,12 @@ export const environment = {
       secret: "U4tYNR8YyMTu8WkfKKdNchZ78sWshM94"
     },
     Firebase: {
-      apiKey: "AIzaSyAT0UuQdLdFuruRlRmsTQCi47ba3qxNAOI",
-      authDomain: "warcraftdashboard.firebaseapp.com",
-      databaseURL: "https://warcraftdashboard.firebaseio.com",
-      projectId: "warcraftdashboard",
-      storageBucket: "warcraftdashboard.appspot.com",
-      messagingSenderId: "763462886015"
+      apiKey: "AIzaSyBNxMx_QYaxv5crRMGS1NhAq6nCr3LsMFs",
+      authDomain: "warcraftdashboard-bc5d5.firebaseapp.com",
+      databaseURL: "https://warcraftdashboard-bc5d5.firebaseio.com",
+      projectId: "warcraftdashboard-bc5d5",
+      storageBucket: "",
+      messagingSenderId: "1016864854836"
     },
   }
 };
